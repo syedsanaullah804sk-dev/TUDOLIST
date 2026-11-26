@@ -1,0 +1,95 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskFlow - To Do List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <header>
+            <div class="logo">✦ TaskFlow</div>
+            <button id="themeBtn">☀ Theme</button>
+        </header>
+
+        <section class="welcome">
+            <p class="subtitle">YOUR PERSONAL PRODUCTIVITY SPACE</p>
+            <h1>Manage Your <span>Daily Tasks.</span></h1>
+            <p>Stay organized, focused and get things done.</p>
+        </section>
+
+        <section class="stats">
+            <div class="stat-card">
+                <p>Total Tasks</p>
+                <h2 id="totalTasks">0</h2>
+            </div>
+
+            <div class="stat-card">
+                <p>Completed</p>
+                <h2 id="completedTasks">0</h2>
+            </div>
+
+            <div class="stat-card">
+                <p>Pending</p>
+                <h2 id="pendingTasks">0</h2>
+            </div>
+        </section>
+
+        <section class="progress-section">
+            <div class="progress-info">
+                <h3>Daily Progress</h3>
+                <span id="progressText">0%</span>
+            </div>
+            <div class="progress-bar">
+                <div id="progressFill"></div>
+            </div>
+        </section>
+
+        <section class="task-section">
+
+            <h2>My Tasks</h2>
+
+            <div class="add-task">
+                <input type="text" id="taskInput"
+                    placeholder="What do you need to do?">
+
+                <select id="priority">
+                    <option value="Low">Low</option>
+                    <option value="Medium" selected>Medium</option>
+                    <option value="High">High</option>
+                </select>
+
+                <input type="date" id="dueDate">
+
+                <button id="addBtn">+ Add Task</button>
+            </div>
+
+            <input type="text" id="searchInput"
+                class="search"
+                placeholder="🔍 Search your tasks...">
+
+            <div class="filters">
+                <button class="filter active" data-filter="all">All</button>
+                <button class="filter" data-filter="pending">Pending</button>
+                <button class="filter" data-filter="completed">Completed</button>
+            </div>
+
+            <div id="taskList"></div>
+
+            <p id="emptyMessage">No tasks yet. Add your first task!</p>
+
+        </section>
+
+        <footer>
+            <p>© 2026 TaskFlow | Designed with HTML, CSS & JavaScript</p>
+        </footer>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
